@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+    <head>
+        <link rel="shortcut icon" type="imagex/png" href="logoo (1).png">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Back-End</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #001a2b;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        header img {
+            width: 10%;
+            height: 10%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 70px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #001a2b;
+            color: #fff;
+            padding: 10px 20px;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content img {
+            width: 40px; 
+            height: auto; 
+            margin-right: 10px;
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 20px;
+           text-align: justify;
+
+        
+        }
+
+        .content h2 {
+            color: #333;
+            
+        }
+
+        .advantages {
+            margin-top: 20px;
+        }
+
+        .banner {
+            float: right;
+            width: 250px;
+            margin: 20px;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .creative-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .creative-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .creative-menu ul li {
+            padding: 10px 0;
+        }
+
+        .creative-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .creative-menu ul li a::before,
+        .creative-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e5730d;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+        }
+
+        .creative-menu ul li a::after {
+            top: auto;
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        .creative-menu ul li a:hover::before,
+        .creative-menu ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .creative-menu ul li a:hover {
+            color: #e5730d;
+        }
+
+        .creative-menu ul li:hover a {
+            background-color: #1b4b72;
+            border-radius: 8px;
+        }
+        
+        .video-channel h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .advantages {
+            margin-top: 20px;
+        }
+
+        .audio-button {
+            background-color: #001a2b;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .audio-button:hover {
+            background-color: #c0392b;
+        }
+
+        .audio-button img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+           </style>
+</head>
+<body>
+    <header>
+        <nav class="creative-menu">
+            <div class="menu-icon">
+                <img src="logoo (1).png" alt="Ícone Menu">
+            </div>
+            <ul>
+                <li><a href="bemvindo.html#home">Início</a></li>
+                <li><a href="bemvindo.html#profissões">Profissões</a></li>
+                <li><a href="bemvindo.html#cursos">Cursos</a></li>
+                <li><a href="bemvindo.html#faculdades">Faculdades</a></li>
+                <li><a href="bemvindo.html#entrevistas">Entrevistas</a></li>
+                <li><a href="bemvindo.html#sobrenos">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+        <div class="header">
+            <div class="header-content">
+                <a href="bemvindo.html#cursos" > <img src="seta (1).png" alt="Seta"></a>
+                <h1>Back-End</h1>
+            </div>
+    </div>
+        <div class="content">
+          <section>
+            <h2>O que é Desenvolvimento Back-End?</h2>
+            <p>O Back-End envolve a criação da lógica, banco de dados e a infraestrutura que suporta o funcionamento de sites e aplicativos. É a parte do desenvolvimento que lida com o processamento de dados, autenticação de usuários e comunicação com servidores.</p>
+        
+            <img src="back1.jpg" alt="Exemplo de desenvolvimento Back-End em ação">
+        
+            <h2>Conteúdo do Curso</h2>
+            <p>O curso de desenvolvimento Back-End abrange os seguintes tópicos:</p>
+            <ul>
+                <li>Fundamentos de servidores e redes</li>
+                <li>Linguagens de programação: Python, Node.js, Java</li>
+                <li>Bancos de dados relacionais e não-relacionais (SQL, NoSQL)</li>
+                <li>APIs REST e GraphQL</li>
+                <li>Autenticação e autorização de usuários</li>
+                <li>Segurança e boas práticas no Back-End</li>
+                <li>Deploy e escalabilidade</li>
+            </ul>
+        
+            <img src="back2.jpg" alt="Ferramentas usadas no desenvolvimento Back-End">
+        
+            <h2>Objetivo do Curso</h2>
+            <p>O objetivo do curso é capacitar o aluno a desenvolver a lógica e os sistemas necessários para garantir que aplicações web e móveis funcionem corretamente, conectando front-end, bancos de dados e servidores de forma eficiente e segura.</p>
+        
+          
+            <h2>Público-Alvo</h2>
+            <p>O curso é destinado a pessoas que desejam aprender a desenvolver servidores, gerenciar banco de dados e garantir a segurança e escalabilidade de sistemas web. Ideal tanto para iniciantes quanto para desenvolvedores que desejam expandir seus conhecimentos em Back-End.</p>
+        </section>
+</section> 
+                </p>   
+                    
+                </div>
+            <div class="advantages">
+                <h3>Vantagens</h3>
+                <p>As principais vantagens de seguir uma carreira como desenvolvedor back-end incluem a possibilidade de trabalhar de maneira autônoma, com flexibilidade para freelancing ou trabalho remoto. A área está em constante crescimento, refletindo uma alta demanda e proporcionando boa remuneração. Além disso, a carreira oferece diversidade de setores e oportunidades de especialização, permitindo que os profissionais atuem em diferentes indústrias e se aprofundem em áreas de interesse específico. Com a capacidade de impactar diretamente a funcionalidade de sistemas e aplicações, e a necessidade contínua de atualização com novas tecnologias, o desenvolvimento back-end se destaca como uma escolha sólida e promissora para quem busca um crescimento constante e realização profissional.</p>
+        </div>
+       
+        <div class="audio-button">      
+            <img src="mascote.mp3.gif" alt="Botão de Áudio">
+            <audio id="audioPlayer" src="curso de back end.mp3"></audio>
+        </div>
+    
+        <script>
+            const audioButton = document.querySelector('.audio-button');
+            const audioPlayer = document.getElementById('audioPlayer');
+    
+            audioButton.addEventListener('click', () => {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                } else {
+                    audioPlayer.pause();
+                }
+            });
+        </script>
+
+</div></body></html>

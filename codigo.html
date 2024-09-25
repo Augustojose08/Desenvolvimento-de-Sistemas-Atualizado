@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="shortcut icon" type="image/png" href="logoo (1).png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Visualizador de Código HTML e CSS</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        
+        header {
+            background-color: #001a2b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background-color: #001a2b;
+            color: #fff;
+            padding: 10px 20px;
+            align-items: center;
+            
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .code-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        
+        .code-box {
+            background-color: #001a2b;
+            color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            width: 95%;
+            height: 550px;
+            overflow-y: auto; 
+        }
+
+   
+        .creative-menu {
+    
+   
+    display: flex;
+        
+      
+       
+    align-items: center;
+        
+       
+    justify-content: flex-start;
+    }
+    
+    .creative-menu ul {
+       
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ display: flex;
+    gap: 30px;
+ text-align: left; 
+    }
+
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+    
+
+        .creative-menu ul li {
+            padding: 10px 0;
+        }
+
+        .creative-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .creative-menu ul li a::before,
+        .creative-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e5730d;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+        }
+
+        .creative-menu ul li a::after {
+            top: auto;
+            bottom: 0;
+            transform-origin: right;
+            text-align: left;
+        }
+
+        .creative-menu ul li a:hover::before,
+        .creative-menu ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .creative-menu ul li a:hover {
+            color: #e5730d;
+        }
+
+        .creative-menu ul li:hover a {
+            background-color: #1b4b72;
+            border-radius: 8px;
+        }
+        
+    </style>
+</head>
+<body>
+            <header>
+            <nav class="creative-menu">
+                <div class="menu-icon">
+                    <a href="teste.html"><img src="logo.png" alt="Ícone Menu"></a>
+                </div>
+                <ul>
+                 <li><a href="bemvindo.html">Início</a></li>
+                <li><a href="bemvindo.html#profissões">Profissões</a></li>
+                <li><a href="bemvindo.html#cursos">Cursos</a></li>
+                <li><a href="bemvindo.html#faculdades">Faculdades</a></li>
+                <li><a href="bemvindo.html#entrevistas">Entrevistas</a></li>
+                <li><a href="#bemvindo.html#sobrenos">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </header>
+    <header>
+        <div class="header">
+            <div class="header-content">
+                <a href="bemvindo.html#profissões" > <img src="seta (1).png" alt="Seta"></a>
+                <h1>Veja o Código HTML e CSS Desta Página</h1>
+            </div>
+      
+    </header>
+
+    <section>
+        <div class="code-container">
+            <div>
+                <h2>Código HTML:</h2>
+                <div class="code-box">
+ !DOCTYPE html<br>
+ html lang="pt-BR"<br>
+head<br>
+meta charset="UTF-8"<br>
+meta name="viewport" content="width=device-width, initial-scale=1.0"<br>
+meta http-equiv="X-UA-Compatible" content="IE=edge"<br>
+title Visualizador de Código HTML e CSS/title<br>
+style<br>
+style<br>
+head<br>
+body<br>
+header<br>
+Veja o Código HTML e CSS Desta Página<br>
+header<br>
+section<br>
+Código HTML:<br>
+div class="code-box"!-- Aqui vai o código HTML:<br>
+Código CSS:<br>
+div class="code-box"-- Aqui vai o código CSS<br>
+section<br>
+footer<br>
+copy; 2024 Visualizador de Código<br>
+footer<br>
+body<br>
+html
+                </div>
+            </div>
+
+            <div>
+                <h2>Código CSS:</h2>
+                <div class="code-box">
+body {
+font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; 
+}<br>
+header 
+{ background-color: #4CAF50; color: white; padding: 20px; text-align: center; 
+}<br>
+section { 
+padding: 20px;
+}<br>
+.code-box {
+background-color: #2e2e2e; color: #f1f1f1; padding: 20px; border-radius: 8px; font-family: 'Courier New', monospace; white-space: pre-wrap; word-wrap: break-word;
+}<br>
+h2 {
+color: #333; 
+}<br>
+footer { 
+background-color: #333; color: white; text-align: center; padding: 10p;
+}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

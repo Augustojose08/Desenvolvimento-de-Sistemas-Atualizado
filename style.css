@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001a2b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:  #001a2b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left; 
+}
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  
+}
+
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+main .content {
+    width: 60%;
+}
+
+main .content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e5730d;
+    padding-bottom: 10px;
+}
+
+main .content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+main .image img {
+    width: 500px;
+    height: 500px;
+}
+
+
+
+.menu-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.creative-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    
+}
+
+.creative-menu ul li {
+    padding: 10px 0;
+}
+
+.creative-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.creative-menu ul li a::before,
+.creative-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e5730d;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+}
+
+.creative-menu ul li a::after {
+    top: auto;
+    bottom: 0;
+    transform-origin: right;
+}
+
+.creative-menu ul li a:hover::before,
+.creative-menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.creative-menu ul li a:hover {
+    color: #e5730d;
+}
+
+.creative-menu ul li:hover a {
+    background-color:#001a2b;
+
+    border-radius: 8px;
+}
+
+
+.audio-button {
+    background-color: #001a2b;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ 
+    
+
+}
+.audio-button:hover {
+    background-color: #c0392b;
+}
+
+.audio-button img {
+    width: 90px;
+    height: 80px;
+    margin-right: 10%;
+   
+}
+

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="shortcut icon" type="image/png" href="logoo (1).png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Visualizador de Código e Interação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #001a2b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .code-box {
+            background-color: #001a2b;
+            color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            width: 95%;
+            height: auto;
+            max-height: 550px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .code-box {
+                width: 100%;
+            }
+        }
+
+        .interactive-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #6c757e;
+        }
+                .creative-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+        .creative-menu {
+    display: flex;   
+    align-items: center;  
+    justify-content: flex-start;
+    }
+    
+    .creative-menu ul {
+       
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ display: flex;
+    gap: 30px;
+ text-align: left; 
+    }
+
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        
+        .creative-menu ul li {
+            padding: 10px 0;
+        }
+
+        .creative-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .creative-menu ul li a::before,
+        .creative-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e5730d;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+        }
+
+        .creative-menu ul li a::after {
+            top: auto;
+            bottom: 0;
+            transform-origin: right;
+            text-align: left;
+        }
+
+        .creative-menu ul li a:hover::before,
+        .creative-menu ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .creative-menu ul li a:hover {
+            color: #e5730d;
+        }
+
+        .creative-menu ul li:hover a {
+            background-color: #1b4b72;
+            border-radius: 8px;
+        }
+        
+        .container {
+            width: 100%;
+            margin-top: 70px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #001a2b;
+            color: #fff;
+            padding: 10px 20px;
+            align-items: center;
+            
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content img {
+            width: 40px; 
+            height: auto; 
+            margin-right: 10px; 
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+            <header>
+            <nav class="creative-menu">
+                <div class="menu-icon">
+                    <a href="teste.html"><img src="logo.png" alt="Ícone Menu"></a>
+                </div>
+                <ul>
+                    <li><a href="bemvindo.html">Início</a></li>
+                    <li><a href="bemvindo.html#profissões">Profissões</a></li>
+                    <li><a href="bemvindo.html#cursos">Cursos</a></li>
+                    <li><a href="bemvindo.html#faculdades">Faculdades</a></li>
+                    <li><a href="bemvindo.html#entrevistas">Entrevistas</a></li>
+                    <li><a href="#bemvindo.html#sobrenos">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </header>
+    <header>
+        <div class="header"></div>
+            <div class="header-content">
+                <a href="bemvindo.html#profissões" > <img src="seta (1).png" alt="Seta"></a>
+                <h1>Simulação de Banco de Dados</h1>
+            </div>
+    </header>
+
+    <section>
+        <h2>Tabela ilustrativa</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Data de Cadastro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Maria</td>
+                    <td>maria@exp.com</td>
+                    <td>03/07/2016</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>João</td>
+                    <td>joao@exp.com</td>
+                    <td>25/01/2020</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ana</td>
+                    <td>ana@exp.com</td>
+                    <td>10/08/2020</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Pedro</td>
+                    <td>pedro@exp.com</td>
+                    <td>28/09/2019</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Código Banco de Dados</h2>
+        <div class="code-box">
+            <pre><code>-- Definição da Tabela de Usuários
+CREATE TABLE Usuarios (
+ID INT PRIMARY KEY AUTO_INCREMENT,
+Nome VARCHAR(100) NOT NULL,
+Email VARCHAR(100) UNIQUE NOT NULL,
+DataCadastro DATE DEFAULT CURRENT_DATE
+);
+
+-- Inserção de Dados
+INSERT INTO Usuarios (Nome, Email) VALUES
+('Maria', 'maria@exp.com'),
+('João', 'joao@exp.com'),
+('Ana', 'ana@exp.com'),
+('Pedro', 'pedro@exp.com');
+
+-- Consulta dos Dados
+SELECT * FROM Usuarios;</code></pre>
+        </div>
+    </section>
+
+    
+</body>
+</html>

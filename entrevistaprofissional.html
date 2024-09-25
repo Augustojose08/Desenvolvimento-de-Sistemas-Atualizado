@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="shortcut icon" type="imagex/png" href="logoo (1).png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrevistas - Profissão</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001a2b;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #001a2b;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    
+         p {
+            color: #fff;
+        }
+        h2  {
+            color: white;
+        }
+        h3{
+            color: #fff;
+        }
+
+        header img {
+            width: 10%;
+            height: 10%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        video {
+            width: 80%;
+            max-width: 800px;
+            height: auto;
+            border: 3px solid #333;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    .creative-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon img {
+    width: 51px;
+    height: 50px;
+}
+
+.creative-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.creative-menu ul li {
+    padding: 10px 0;
+}
+
+.creative-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.creative-menu ul li a::before,
+.creative-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e5730d;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+}
+
+.creative-menu ul li a::after {
+    top: auto;
+    bottom: 0;
+    transform-origin: right;
+}
+
+.creative-menu ul li a:hover::before,
+.creative-menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.creative-menu ul li a:hover {
+    color: #e5730d;
+}
+
+.creative-menu ul li:hover a {
+    background-color: #1b4b72;
+    border-radius: 8px;
+}
+.audio-button {
+    background-color: #001a2b;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.audio-button:hover {
+    background-color: #c0392b;
+}
+
+.audio-button img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.header-content {
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+            <nav class="creative-menu">
+                <div class="menu-icon">
+                    <img src="logoo (1).png" alt="Ícone Menu">
+                </div>
+                <ul>
+                    <li><a href="bemvindo.html#home">Início</a></li>
+                    <li><a href="bemvindo.html#profissões">Profissões</a></li>
+                    <li><a href="bemvindo.html#cursos">Cursos</a></li>
+                    <li><a href="bemvindo.html#faculdades">Faculdades</a></li>
+                    <li><a href="bemvindo.html#entrevistas">Entrevistas</a></li>
+                    <li><a href="bemvindo.html#sobrenos">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="header-content">
+            <a href="bemvindo.html#entrevistas" > <img src="seta (1).png" alt="Seta"></a>
+            <h1>Entrevistas - Profissional</h1>
+        </div>
+    <div class="container">
+        <p><em>Cauã é um profissional de 21 anos que trabalha com a linguagem DELPH e busca se tornar um profissional Sênior na área rede especializada na saúde.</em></p>
+
+        <div class="video-section">
+            <h3>Cauã</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zIHAzwhqSBQ?si=U5aso7piUe7RwPxP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="audio-button">      
+        <img src="mascote.mp3.gif" alt="Botão de Áudio">
+        <audio id="audioPlayer" src="profissional da entrevista.mp3"></audio>
+    </div>
+
+    <script>
+        const audioButton = document.querySelector('.audio-button');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        audioButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+            } else {
+                audioPlayer.pause();
+            }
+        });
+    </script>
+
+
+</body>
+</html>
+   
+</body>
+</html>

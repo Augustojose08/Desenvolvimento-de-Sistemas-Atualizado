@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="shortcut icon" type="imagex/png" href="logoo (1).png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Desenvolvimento de Sistemas</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+        text-align: justify;
+        }
+        header {
+            background-color: #001a2b;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        header {
+            background-color: #001a2b;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+      
+        .header {
+            background-color: #001a2b;
+            color: #fff;
+            padding: 10px 20px;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color:#001a2b;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        
+       
+        .developers-list {
+            margin-top: 20px;
+        }
+      
+        .creative-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+      
+
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .creative-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .creative-menu ul li {
+            padding: 10px 0;
+        }
+
+        .creative-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .creative-menu ul li a::before,
+        .creative-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e5730d;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+        }
+
+        .creative-menu ul li a::after {
+            top: auto;
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        .creative-menu ul li a:hover::before,
+        .creative-menu ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .creative-menu ul li a:hover {
+            color: #e5730d;
+        }
+
+        .creative-menu ul li:hover a {
+            background-color: #1b4b72;
+            border-radius: 8px;
+        }
+    .audio-button {
+    background-color: #001a2b;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.audio-button:hover {
+    background-color: #c0392b;
+}
+
+.audio-button img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="creative-menu">
+            <div class="menu-icon">
+                <img src="logoo (1).png" alt="Ícone Menu">
+            </div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="menuprofissao.html">Profissões</a></li>
+                <li><a href="menucurso.html">Cursos</a></li>
+                <li><a href="menuentrevista.html">Entrevistas</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+            </ul>
+
+        </nav>
+    </header>
+   
+    <div class="container">
+        <h2>Sobre Nós</h2>
+        <p><strong>Quem somos?</strong></p>
+        <p>
+            Somos uma equipe de Desenvolvimento de Sistemas do 3º ano do ensino médio da Escola Estadual Presidente Dutra. 
+            Em torno desses 3 anos que estamos aprendendo as estruturas de como programar e como se tornar um bom profissional na área de desenvolvimento de sistemas. 
+            Esse ano foi proposto um projeto que o objetivo é a produção de um site e de um mascote com o tema de desenvolvimento de sistemas e acessível a pessoas com deficiência.
+        </p>
+        
+        <div class="developers-list">
+            <strong>Desenvolvedores:</strong>
+            <ul>
+                <li>Augusto José dos S. Cunha (Desenvolvedor)</li>
+                <li>Marcelo Benício da S. V. Filho (Desenvolvedor)</li>
+                <li>Maria Eduarda M. de Almeida (Desenvolvedora)</li>
+                <li>Yasmin Vitória V. (Desenvolvedora)</li>
+            </ul>
+        </div>
+        <div class="audio-button">      
+            <img src="mascote.mp3.gif" alt="Botão de Áudio">
+            <audio id="audioPlayer" src="sobre nos.mp3"></audio>
+        </div>
+    
+        <script>
+            const audioButton = document.querySelector('.audio-button');
+            const audioPlayer = document.getElementById('audioPlayer');
+    
+            audioButton.addEventListener('click', () => {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                } else {
+                    audioPlayer.pause();
+                }
+            });
+        </script>
+    
+</body>
+</html>

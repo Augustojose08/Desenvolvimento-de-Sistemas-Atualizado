@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+    <head>
+        <link rel="shortcut icon" type="imagex/png" href="logoo (1).png">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back-End</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #001a2b;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 10%;
+            height: 10%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 70px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #001a2b;
+            color: #fff;
+            padding: 10px 20px;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content img {
+            width: 40px; 
+            height: auto; 
+            margin-right: 10px; 
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            color: #333;
+        }
+
+        .advantages {
+            margin-top: 20px;
+        }
+
+        .banner {
+            float: right;
+            width: 250px;
+            margin: 20px;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+        
+            .table, th, td {
+  border:1px solid black;
+         }
+        
+       
+        .video-channel h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .advantages {
+            margin-top: 20px;
+        }
+
+        .audio-button {
+            background-color: #001a2b;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .audio-button:hover {
+            background-color: #c0392b;
+        }
+
+        .audio-button img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .creative-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.creative-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.creative-menu ul li {
+    padding: 10px 0;
+}
+
+.creative-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.creative-menu ul li a::before,
+.creative-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #001a2b;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+}
+
+.creative-menu ul li a::after {
+    top: auto;
+    bottom: 0;
+    transform-origin: right;
+}
+
+.creative-menu ul li a:hover::before,
+.creative-menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.creative-menu ul li a:hover {
+    color: #e5730d;
+}
+
+.creative-menu ul li:hover a {
+    background-color: #1b4b72;
+    border-radius: 8px;
+}
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="creative-menu">
+            <div class="menu-icon">
+                <img src="logoo (1).png" alt="Ícone Menu">
+            </div>
+            <ul>
+                <li><a href="bemvindo.html#home">Início</a></li>
+                <li><a href="bemvindo.html#profissões">Profissões</a></li>
+                <li><a href="bemvindo.html#cursos">Cursos</a></li>
+                <li><a href="bemvindo.html#faculdades">Faculdades</a></li>
+                <li><a href="bemvindo.html#entrevistas">Entrevistas</a></li>
+                <li><a href="bemvindo.html#sobrenos">Sobre Nós</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+ 
+        <div class="header">
+            <div class="header-content">
+                <a href="bemvindo.html#profissões" > <img src="seta (1).png" alt="Seta"></a>
+                <h1>Back-End</h1>
+            </div>
+    </div>
+        <div class="content">
+            
+            <section class="info">
+                <h1>Explorando o Back-End</h1>
+        <h2>O que é Back-End?</h2>
+        <p>
+            O back-end é a parte do desenvolvimento de software que lida com o funcionamento interno dos sistemas, ou seja, o que acontece por trás das telas dos aplicativos e sites. É responsável por processar e armazenar dados, garantir a segurança e a eficiência das operações e permitir a comunicação entre o front-end (a parte visível para o usuário) e o banco de dados.
+        </p>
+        
+        <h2>Principais Funções do Desenvolvedor Back-End</h2>
+        <p><strong>Desenvolvimento de Lógica de Aplicações:</strong> Criar algoritmos e lógica que controlam como os dados são manipulados e processados.</p>
+        <p><strong>Gerenciamento de Banco de Dados:</strong> Estruturar e gerenciar bancos de dados para armazenar e recuperar informações de forma eficiente.</p>
+        <p><strong>Criação de APIs:</strong> Desenvolver Interfaces de Programação de Aplicações (APIs) que permitem que diferentes sistemas se comuniquem entre si.</p>
+        <p><strong>Segurança:</strong> Implementar medidas de segurança para proteger dados e sistemas contra ataques e acessos não autorizados.</p>
+        <p><strong>Otimização de Performance:</strong> Melhorar o desempenho das aplicações, garantindo que elas funcionem de maneira rápida e eficiente.</p>
+        
+        <h2>Tecnologias e Linguagens Comuns</h2>
+        <p><strong>Linguagens de Programação:</strong> Python, Java, PHP, Ruby, C#, Node.js (JavaScript no back-end).</p>
+        <p><strong>Frameworks:</strong> Django (Python), Spring (Java), Laravel (PHP), Express (Node.js).</p>
+        <p><strong>Banco de Dados:</strong> MySQL, PostgreSQL, MongoDB, Oracle.</p>
+        <p><strong>Serviços e Protocolos:</strong> RESTful APIs, GraphQL, HTTP/HTTPS.</p>
+        
+        <h2>Perspectivas de Carreira</h2>
+        <p>
+            O mercado para desenvolvedores back-end está em alta, com muitas oportunidades de trabalho em empresas de tecnologia, startups e grandes corporações. A demanda por profissionais qualificados tende a crescer com a expansão contínua da tecnologia e do uso de aplicativos e sistemas digitais.
+        </p>
+        </section>
+            <div class="audio-button">      
+                <img src="mascote.mp3.gif" alt="Botão de Áudio">
+                <audio id="audioPlayer" src="back.mp3"></audio>
+            </div>
+        
+            <script>
+                const audioButton = document.querySelector('.audio-button');
+                const audioPlayer = document.getElementById('audioPlayer');
+        
+                audioButton.addEventListener('click', () => {
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                    } else {
+                        audioPlayer.pause();
+                    }
+                });
+            </script>
+    
+
+</body></html>

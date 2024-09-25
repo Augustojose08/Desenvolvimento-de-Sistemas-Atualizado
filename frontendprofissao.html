@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="shortcut icon" type="image/png" href="logoo (1).png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #001a2b;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header {
+            background-color: #001a2b;
+            color: #fff;
+            padding: 10px 20px;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content img {
+            width: 40px; 
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+
+        .content h2 {
+            color: #333;
+        }
+
+        .content .text {
+            flex: 1;
+            min-width: 0; 
+        }
+
+        .content .banner {
+            width: 30%;
+            max-width: 300px; 
+        }
+
+        .banner img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .video-channel h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .advantages {
+            margin-top: 20px;
+        }
+
+        .audio-button {
+            background-color: #001a2b;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .audio-button:hover {
+            background-color: #c0392b;
+        }
+
+        .audio-button img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        menu-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+
+.creative-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.creative-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .creative-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .creative-menu ul li {
+            padding: 10px 0;
+        }
+
+        .creative-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .creative-menu ul li a::before,
+        .creative-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e5730d;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+        }
+
+        .creative-menu ul li a::after {
+            top: auto;
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        .creative-menu ul li a:hover::before,
+        .creative-menu ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .creative-menu ul li a:hover {
+            color: #e5730d;
+        }
+
+        .creative-menu ul li:hover a {
+            background-color: #1b4b72;
+            border-radius: 8px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logoo (1).png" alt="Logo">
+        <nav class="creative-menu">
+            <ul>
+                <li><a href="bemvindo.html#home">Início</a></li>
+                <li><a href="bemvindo.html#profissões">Profissões</a></li>
+                <li><a href="bemvindo.html#cursos">Cursos</a></li>
+                <li><a href="bemvindo.html#faculdades">Faculdades</a></li>
+                <li><a href="bemvindo.html#entrevistas">Entrevistas</a></li>
+                <li><a href="bemvindo.html#sobrenos">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header">
+        <div class="header-content">
+            <a href="bemvindo.html#profissões"><img src="seta (1).png" alt="Seta"></a>
+            <h1>Front-End</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="text">
+            <div class="container">
+                <section class="info">
+                    <h1>Explorando o Desenvolvimento Front-End</h1>
+                    <h2>Introdução ao Front-end</h2>
+                    <p>O front-end é a parte visível de um site ou aplicativo, a interface com a qual os usuários interagem diretamente. Ele é responsável por garantir não apenas uma aparência estética atraente, mas também por proporcionar uma boa usabilidade e uma experiência de usuário agradável. Pense no front-end como a vitrine de uma loja: ele atrai clientes, facilita a navegação e torna a interação intuitiva.</p>
+        
+                    <h2>Tecnologias e Ferramentas</h2>
+                    <ul>
+                        <li><strong>HTML (HyperText Markup Language)</strong>: Fornece a estrutura básica da página, definindo a disposição de elementos como cabeçalhos, parágrafos, imagens e links. É como o esqueleto da página.</li>
+                        <li><strong>CSS (Cascading Style Sheets)</strong>: Responsável pela decoração e pelo layout da página. Controla aspectos como cores, fontes, espaçamentos e a organização dos elementos, transformando a estrutura básica em um design visualmente atraente e coerente.</li>
+                        <li><strong>JavaScript</strong>: Adiciona interatividade à página. Permite que os elementos respondam a ações do usuário, como cliques e rolagens, e realiza funções dinâmicas, como formulários interativos e atualizações de conteúdo sem recarregar a página.</li>
+                    </ul>
+        
+                    <h2>Objetivo</h2>
+                    <p>O trabalho do desenvolvedor front-end vai além de criar uma interface visualmente agradável. Envolve assegurar que a experiência do usuário seja fluida e intuitiva, independentemente do dispositivo utilizado, e que a aplicação funcione corretamente em todas as condições. Em suma, o front-end é a parte crucial que une o design ao funcionamento interativo, tornando o site ou aplicativo não apenas bonito, mas também funcional e eficiente.</p>
+                    
+                    <h2>Empregabilidade</h2>
+                    <p>Ferramentas como Git são essenciais para colaborar com outras pessoas e manter um histórico das alterações feitas no projeto, facilitando o gerenciamento e a coordenação do desenvolvimento.</p>
+        
+                    <h2>Média Salarial</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Faixa Salarial</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Trainee</td>
+                                <td>R$ 1.000,00 a R$ 1.500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Júnior</td>
+                                <td>R$ 2.750,00 a R$ 4.350,00</td>
+                                </tr>
+                            <tr>
+                                <td>Pleno</td>
+                                <td>R$ 5.500,00 a R$ 7.500,00</td>
+                            </tr>
+                            <tr>
+                                <td>Sênior</td>
+                                <td>R$ 8.150,00 a R$ 14.530,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>   
+            
+        </div>
+                </div>
+
+    <div class="audio-button">      
+        <img src="mascote.mp3.gif" alt="Botão de Áudio">
+        <audio id="audioPlayer" src="front.mp3"></audio>
+    </div>
+
+    <script>
+        const audioButton = document.querySelector('.audio-button');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        audioButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+            } else {
+                audioPlayer.pause();
+            }
+        });
+    </script>
+</body>
+</html>

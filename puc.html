@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="shortcut icon" type="imagex/png" href="logoo (1).png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise e Desenvolvimento de Sistemas - PUC Minas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0px;
+        }
+        header {
+            background-color: #001a2b;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        header img {
+            width: 10%;
+            height: 10%;
+        }
+       
+        header img {
+            width: 10%;
+            height: 10%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+       
+
+       
+        .container {
+            
+            justify-content: center;
+           
+            background-color: #fff;
+            max-width: 1200px;
+        
+            align-items: center;
+            overflow:hidden ;
+          
+        }
+        .puc img {
+            float: left;
+            width: 400px;
+            height: 960px;
+            margin-right: 25px;
+            max-width: 250px;
+        }
+        
+        .header {
+            background-color: #001a2b;
+            color: #fff;
+            padding: 10px 20px;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content img {
+            width: 40px; 
+            height: auto; 
+            margin-right: 10px;
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .content {
+            padding: 20px;
+           text-align: justify;
+
+        
+        }
+
+        .content h2 {
+            color: #333;
+            
+        }
+
+
+        
+        h1 {
+            font-size: 24px;
+            color: #121111;
+        }
+
+        .investment,
+        .duration {
+            margin-bottom: 30px;
+           
+
+        }
+
+        .investment p,
+        .duration p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 8px;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+        }
+
+      
+        .creative-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .creative-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .creative-menu ul li {
+            padding: 10px 0;
+        }
+
+        .creative-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .creative-menu ul li a::before,
+        .creative-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e5730d;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+        }
+
+        .creative-menu ul li a::after {
+            top: auto;
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        .creative-menu ul li a:hover::before,
+        .creative-menu ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .creative-menu ul li a:hover {
+            color: #e5730d;
+        }
+
+        .creative-menu ul li:hover a {
+            background-color:#001a2b;
+        
+            border-radius: 8px;
+        }
+        .audio-button {
+    background-color: #001a2b;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.audio-button:hover {
+    background-color: #c0392b;
+}
+
+.audio-button img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+</style>
+</head>
+
+<body>
+    <header>
+        <nav class="creative-menu">
+            <div class="menu-icon">
+                <img src="logoo (1).png" alt="Ícone Menu">
+            </div>
+            <ul>
+                <li><a href="bemvindo.html#home">Início</a></li>
+                <li><a href="bemvindo.html#profissões">Profissões</a></li>
+                <li><a href="bemvindo.html#cursos">Cursos</a></li>
+                <li><a href="bemvindo.html#faculdades">Faculdades</a></li>
+                <li><a href="bemvindo.html#entrevistas">Entrevistas</a></li>
+                <li><a href="bemvindo.html#sobrenos">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header">
+        <div class="header-content">
+            <a href="bemvindo.html#faculdades" > <img src="seta (1).png" alt="Seta"></a>
+            <h1>PUC MINAS</h1>
+        </div>
+    </div>
+
+    
+
+    <div class="container">
+        <div class="left-column">
+        
+    <section>
+      
+         <h1>Curso de Análise e Desenvolvimento de Sistemas</h1>
+        <h2>Sobre a PUC Minas</h2>
+        <p>A Pontifícia Universidade Católica de Minas Gerais (PUC Minas) é uma das mais tradicionais instituições de ensino superior do Brasil. Com um enfoque em excelência acadêmica e inovação, a PUC Minas oferece uma ampla gama de cursos de graduação e pós-graduação. Seu compromisso com a formação de profissionais éticos e qualificados é reconhecido em todo o país.</p>
+    </section>
+
+    <section>
+        <h2>Investimento</h2>
+        <p><strong>Valor:</strong> A partir de R$ 300,00 por mês</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Valor Mensal</th>
+                    <th>Parcelamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Presencial</td>
+                    <td>R$ 1.200,00/mês</td>
+                    <td>Parcelamento em até 12 vezes sem juros</td>
+                </tr>
+                <tr>
+                    <td>Digital (EAD)</td>
+                    <td>R$ 550,00/mês</td>
+                    <td>A partir de R$150/mês durante o curso todo</td>
+                </tr>
+                <tr>
+                    <td>Semipresencial</td>
+                    <td>R$ 950,00/mês</td>
+                    <td>Bolsas de até 50%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Mais informações</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Duração</th>
+                    <th>Formação</th>
+                    <th>Forma de Ingresso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3 anos</td>
+                    <td>Graduação</td>
+                    <td>Enem ou vestibular</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>Para mais informações, acesse: <a href="https://www.pucminas.br" target="_blank">PUC Minas</a></p>
+    </footer>
+            
+           
+        
+            
+    <div class="audio-button">      
+        <img src="mascote.mp3.gif" alt="Botão de Áudio">
+        <audio id="audioPlayer" src="puc (2).mp3"></audio>
+    </div>
+
+    <script>
+        const audioButton = document.querySelector('.audio-button');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        audioButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+            } else {
+                audioPlayer.pause();
+            }
+        });
+        </script>
+
+</body>
+
+</html>

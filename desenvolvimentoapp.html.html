@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+    <head>
+        <link rel="shortcut icon" type="imagex/png" href="logoo (1).png">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento de Aplicativos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #001a2b;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 10%;
+            height: 10%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 70px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #001a2b;
+            color: #fff;
+            padding: 10px 20px;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content img {
+            width: 40px;
+            height: auto; 
+            margin-right: 10px; 
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            color: #333;
+        }
+
+        .advantages {
+            margin-top: 20px;
+        }
+
+        .banner {
+            float: right;
+            width: 250px;
+            margin: 20px;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+        
+            .table, th, td {
+  border:1px solid black;
+         }
+        
+        .creative-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .creative-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .creative-menu ul li {
+            padding: 10px 0;
+        }
+
+        .creative-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+        .images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            width:200px;
+            height: 200px;
+        }
+
+
+        .images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+          
+        }
+
+        .creative-menu ul li a::before,
+        .creative-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e5730d;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+        }
+
+        .creative-menu ul li a::after {
+            top: auto;
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        .creative-menu ul li a:hover::before,
+        .creative-menu ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .creative-menu ul li a:hover {
+            color: #e5730d;
+        }
+
+        .creative-menu ul li:hover a {
+            background-color: #1b4b72;
+            border-radius: 8px;
+        }
+        .video-channel h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .advantages {
+            margin-top: 20px;
+        }
+
+        .audio-button {
+            background-color: #001a2b;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .audio-button:hover {
+            background-color: #c0392b;
+        }
+
+        .audio-button img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="creative-menu">
+            <div class="menu-icon">
+                <img src="logoo (1).png" alt="Ícone Menu">
+            </div>
+            <ul>
+                <li><a href="bemvindo.html#home">Início</a></li>
+                <li><a href="bemvindo.html#profissões">Profissões</a></li>
+                <li><a href="bemvindo.html#cursos">Cursos</a></li>
+                <li><a href="bemvindo.html#faculdades">Faculdades</a></li>
+                <li><a href="bemvindo.html#entrevistas">Entrevistas</a></li>
+                <li><a href="bemvindo.html#sobrenos">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+        <div class="header">
+            <div class="header-content">
+                <a href="bemvindo.html#profissões" > <img src="seta (1).png" alt="Seta"></a>
+                <h1>Desenvolvimento de Aplicativos</h1>
+            </div>
+    </div>
+        <div class="content">
+            <section class="info">
+            <h1>Explorando o desenvolvimento de Aplicativos</h1>
+<h2>O Papel do Desenvolvedor de Aplicativos</h2>
+    <p>O desenvolvedor de aplicativos é o profissional responsável por criar, planejar, implementar e divulgar soluções para dispositivos móveis. Ele atua tanto na parte técnica quanto na criativa, com foco na resolução de problemas.</p>
+
+    <h2>Ferramentas e Testes</h2>
+    <p>Parte do trabalho do desenvolvedor envolve avaliar quais ferramentas e recursos serão necessários para o desenvolvimento do aplicativo. Além disso, ele configura testes que são fundamentais para assegurar que o produto funcione de maneira adequada.</p>
+
+    <h2>Demanda Crescente no Mercado</h2>
+    <p>O serviço de desenvolvimento de aplicativos tem se tornado cada vez mais procurado por grandes marcas e empresas de renome. Esses aplicativos são usados como estratégias para aumentar as vendas e melhorar o relacionamento com os clientes.</p>
+
+    <h2>Trabalho em Equipe</h2>
+    <p>O desenvolvedor de aplicativos não trabalha sozinho. Ele precisa colaborar com designers e analistas de negócios para garantir que o aplicativo ofereça uma boa experiência ao usuário, além de atender aos requisitos técnicos.</p>
+
+    <h2>Expansão do Papel do Desenvolvedor</h2>
+    <p>Com o aumento da digitalização e a busca por soluções móveis personalizadas, o papel do desenvolvedor de aplicativos está cada vez mais diversificado. Seu sucesso depende de uma combinação de habilidades técnicas, criatividade e foco no cliente, tornando-o uma figura crucial no cenário digital atual.</p>
+                        <h2>Média Salarial</h2>
+                <table borde ="1">
+          <tr>
+            <th>Nível</th>
+            <th>Média Salarial (R$)</th>
+          </tr>
+          <tr>
+            <td>Trainee</td>
+            <td>1.744,24</td>
+          </tr>
+          <tr>
+            <td>Júnior</td>
+            <td>3.658,92</td>
+          </tr>
+          <tr>
+            <td>Pleno</td>
+            <td>7.387,42</td>
+          </tr>
+          <tr>
+            <td>Sênior</td>
+            <td>14.399,46</td>
+          </tr>
+        </table>
+        </section>
+
+    <div class="images">
+        <div class="image-container">
+            
+          <p>  <div class="caption">WhatsApp: Inicialmente desenvolvido como um aplicativo de mensagens para smartphones, antes de ganhar versões para outros dispositivos.</div></p>
+        </div>
+   
+        <div class="image-container">
+           
+           <p> <div class="caption">Instagram: Lançado inicialmente como um aplicativo móvel para compartilhar fotos e vídeos, antes de expandir para outras plataformas.</div></p>
+        </div>
+        <div class="image-container">
+            
+           <p><div class="caption">Zoom: Embora tenha se popularizado principalmente durante a pandemia, o Zoom continua sendo amplamente utilizado para videoconferências e reuniões virtuais.</div></p>
+        </div>
+    </div>
+    <div class="audio-button">      
+        <img src="mascote.mp3.gif" alt="Botão de Áudio">
+        <audio id="audioPlayer" src="desen.mp3.mp3"></audio>
+    </div>
+
+    <script>
+        const audioButton = document.querySelector('.audio-button');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        audioButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+            } else {
+                audioPlayer.pause();
+            }
+        });
+    </script>
+       
+    
+
+</body></html>

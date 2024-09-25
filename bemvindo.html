@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" type="image/png" href="logoo (1).png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja Bem-Vindo</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: -10px;
+    padding: -100px;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #333;
+   text-align: left;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transform-origin: left; 
+    padding: 10px 20px;
+    align-items: center;
+
+}
+
+.creative-menu {
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+    
+    .creative-menu ul {
+       
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ display: flex;
+    gap: 30px;
+ text-align: left; 
+    }
+        .menu-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+      
+        .creative-menu ul li {
+            padding: 10px 0;
+        }
+
+        .creative-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .creative-menu ul li a::before,
+        .creative-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e5730d;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+        }
+
+        .creative-menu ul li a::after {
+            top: auto;
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        .creative-menu ul li a:hover::before,
+        .creative-menu ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .creative-menu ul li a:hover {
+            color: #e5730d;
+        }
+
+        .creative-menu ul li:hover a {
+            background-color: #1b4b72;
+            border-radius: 8px;
+        }
+        
+.hero {
+    background: url('início.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+.cta-button {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+section {
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e5730d;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #28a745;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #1b4b72;
+}
+
+
+#profissões, #cursos, #entrevistas {
+    background-color: #f8f9fa; 
+    color: #333;
+    padding: 60px 20px;
+    margin-top: 60px;
+}
+
+#profissões .card, #cursos .card, #entrevistas .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+#profissões .card:hover, #cursos .card:hover, #entrevistas .card:hover {
+    background-color: #f1f1f1;
+    border-color: #ddd;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    border-radius: 8px;
+    margin-top: 60px;
+}
+
+.team-member {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-member h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #e5730d;
+}
+
+.team-member p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+        header {
+            background-color: #001a2b;
+     
+        }
+        .bem-vindo {
+            background-image: url('fundosite.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1em;
+            border-radius: 10px;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            color: white;
+            margin-top: 55px;
+            margin-bottom: -65px;
+        }
+
+        .bem-vindo img {
+            vertical-align: middle;
+            margin-right: 1em;
+        }
+
+        .bem-vindo h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .bem-vindo p {
+            margin: 0;
+        }
+.audio-button {
+    background-color: #001a2b;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.audio-button:hover {
+    background-color: #c0392b;
+}
+
+.audio-button img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="creative-menu">
+            <div class="menu-icon">
+                <a href="teste.html"><img src="logo.png" alt="Ícone Menu"></a>
+            </div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#profissões">Profissões</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#faculdades">Faculdades</a></li>
+                <li><a href="#entrevistas">Entrevistas</a></li>
+                <li><a href="#sobrenos">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bem-vindo">
+        <img src="logo.png" alt="logo" width="50" height="50">
+        <h1>Seja Bem-Vindo!</h1>
+        <p>Código e criatividade, gerando produtividade!</p>
+    </div>
+        <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Desenvolvimento de Sistemas</h1>
+            <p>O desenvolvimento de sistemas é uma área fundamental na tecnologia,e sua importância está em constante crescimento. No entanto, muitas pessoas ainda não estão totalmente cientes de como essas tecnologias afetam suas vidas diárias. Para que o desenvolvimento de sistemas tenha um impacto positivo, é essencial torná-lo mais acessível e compreensível para o público geral. Levar o desenvolvimento de sistemas até as pessoas significa torná-lo mais acessível e compreensível, o que ajuda a criar uma sociedade mais informada e engajada com as tecnologias que moldam o nosso mundo. A tecnologia está muito presente no nosso cotidiano principalmente nos aplicativos que existem nos smartphones. Entretanto grande parte das pessoas desconhecem como funciona o desenvolvimento de sistemas e os estudantes da área de tecnologia não sabem o que esperar do mercado de trabalho, sendo assim este site busca reduzir as dúvidas em relação a essa profissão.</p>
+        </div>
+      
+    </section>
+
+    <section id="profissões" class="fade-in">
+        <h2>Profissões</h2>
+        <div class="service-cards">
+            <div class="card">
+                <img src="front.webp" alt="Front-End"><br><br>
+                 <h3>Front-End</h3>
+                <p>Front-end é a parte visual de um site ou aplicativo. É onde a mágica acontece para que os usuários possam interagir e desfrutar de uma experiência incrível na web!</p>
+                <a href="codigo.html" class="cta-button">Visualizar Código</a><br> <br><br>
+                <a href="frontendprofissao.html" class="cta-button">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="ds.jpg" alt="Desenvolvimento de Aplicativos"><br><br><br><br>
+                <h3>Desenvolvimento de Aplicativos</h3>
+                <p>Desenvolvimento de aplicativos é a arte de criar softwares que facilitam a vida, trazendo soluções inovadoras para a palma da sua mão!</p>
+                <a href="codigo2.html" class="cta-button">Visualizar Código</a> <br> <br><br>
+                <a href="desenvolvimentoapp.html.html" class="cta-button">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="back (2).png" alt="Back-End"><br><br><br><br>
+                <h3>Back-End</h3>
+                <p>Back-end é o cérebro por trás dos sites e aplicativos, onde os dados são processados e armazenados para garantir que tudo funcione perfeitamente!</p>
+                <a href="codigo3.html" class="cta-button">Visualizar Código</a><br><br><br>
+                  <a href="backendprofissao.html" class="cta-button">Saiba Mais</a>
+            </div>
+            </div>
+        </div>
+    </section>
+ 
+
+<section id="cursos" class="fade-in">
+    <h2>Cursos</h2>
+    <div class="service-cards">
+        <div class="card">
+            <img src="curso1.png" alt="Front-End">
+            <h3>Front-End</h3>
+            <p>Descubra o mundo do Front-end! Aprenda a criar interfaces incríveis para websites e aplicativos, transformando ideias em experiências visuais interativas. Seu futuro na web começa aqui!</p>
+              <a href="frontendcurso.html" class="cta-button">Saiba Mais</a>
+        </div>
+        <div class="card">
+            <img src="curso2.png" alt="Desenvolvimento de Aplicativos">
+            <h3>Desenvolvimento de Aplicativos</h3>
+            <p>Transforme suas ideias em realidade com o curso de Desenvolvimento de Aplicativos! Aprenda a criar apps inovadores e úteis, prontos para facilitar a vida das pessoas. O futuro da tecnologia está nas suas mãos!</p>
+              <a href="desenapps.html" class="cta-button">Saiba Mais</a>
+        </div>
+        <div class="card">
+            <img src="curso3.jpg" alt="Back-End">
+             <h3>Back-End</h3>
+            <p>Domine o poder do Back-end! Aprenda a criar a lógica e a estrutura que fazem websites e aplicativos funcionarem perfeitamente. Torne-se o cérebro por trás das soluções digitais!</p>
+             <a href="backendcurso.html" class="cta-button">Saiba Mais</a>
+        </div>
+        
+    </div>
+</section>
+
+
+<section id="faculdades" class="fade-in">
+    <h2>Faculdades</h2>
+    <div class="service-cards">
+        <div class="card">
+            <img src="ESTACIO (2).png" alt="Estácio">
+            <p>A Estácio é uma instituição de ensino superior com uma ampla gama de cursos de graduação e pós-graduação. Ela é conhecida por seu ensino acessível e flexível, oferecendo várias modalidades de estudo, como presencial, semipresencial e EAD.</p>
+            <a href="estacio.html" class="cta-button">Saiba mais</a>
+        </div>
+        <div class="card">
+            <img src="puc (2).png" alt="Puc Minas">
+            <p>A PUC Minas é uma das principais instituições de ensino superior de Minas Gerais e do Brasil. Oferece uma vasta gama de cursos de graduação, pós-graduação e extensão, com uma ênfase em formação integral e excelência acadêmica.</p>
+            <a href="puc.html" class="cta-button">Saiba mais</a>
+        </div>
+      
+        
+    </div>
+</section>
+
+<section id="entrevistas" class="fade-in">
+    <h2>Entrevistas</h2>
+    <div class="service-cards">
+        <div class="card">
+           <img src="gif15.gif" alt="Faculdade Estácio">
+        <h3>Desenvolvimento de Sistemas</h3>
+        <p>Entrevista com um profissional da área de desenvolvimento de sistemas</p>
+        <a href="entrevistaprofissional.html" class="cta-button">Ver entrevista</a>
+        </div>
+        <div class="card">
+        <img src="gif16.gif" alt="Faculdade Estácio">
+        <h3>Desenvolvimento de software</h3>
+        <p>Entrevista com uma estudante da área de desenvolvimento de software.</p>
+        <a href="cursoentrevista.html" class="cta-button">Ver entrevista</a>
+        </div>
+    </div>
+</section>
+    <section id="sobrenos" class="fade-in">
+        <div class="container">
+            <h1>Sobre Nós</h1>
+            <p>Somos uma equipe de estudantes do 3º ano do ensino médio da Escola Estadual Presidente Dutra, envolvidos em um projeto inovador na área de Desenvolvimento de Sistemas. Ao longo desses três anos, temos explorado o mundo da programação, com o objetivo de nos tornarmos profissionais qualificados e capacitados para o mercado de trabalho.</p>
+            <p>Este ano, estamos empenhados em criar um site acessível e informativo sobre o desenvolvimento de sistemas, com foco especial em tornar o conteúdo acessível para pessoas com deficiência. Acreditamos que a tecnologia deve ser inclusiva e contribuir para uma sociedade mais justa e conectada.</p>
+            
+            <h2>Equipe:</h2>
+            <div class="team-member">
+                <h3>Augusto José dos S. Cunha</h3>
+                <p>Desenvolvedor</p>
+            </div>
+            <div class="team-member">
+                <h3>Marcelo Benício da S. V. Filho</h3>
+                <p>Desenvolvedor</p>
+            </div>
+            <div class="team-member">
+                <h3>Maria Eduarda M. de Almeida</h3>
+                <p>Desenvolvedora</p>
+            </div>
+            <div class="team-member">
+                <h3>Yasmin Vitória V.</h3>
+                <p>Desenvolvedora</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+     <div class="audio-button">      
+        <img src="mascote.mp3.gif" alt="Botão de Áudio">
+        <audio id="audioPlayer" src="2024-09-20-093349-178562_M8VnLvVF.mp3"></audio>
+    </div>
+
+    <script>
+        const audioButton = document.querySelector('.audio-button');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        audioButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+            } else {
+                audioPlayer.pause();
+            }
+        });
+        </script>
+</body>
+</html>
+</body>
+</html>
